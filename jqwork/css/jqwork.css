@@ -1,0 +1,457 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol{
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*{
+	box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+.header{
+	width: 800px;
+	height: 576px;
+	margin: 0 auto;
+	border: 1PX solid white;
+	position: relative;
+}
+.topbar{
+	height: 20px;
+	background-color: rgba(0,0,0,0.1);
+	margin-top: 100PX;
+}
+.topbar ol{
+	float: right;
+}
+.topbar li{
+	float: left;
+	margin-right: 10Px;
+}
+.topbar li a{
+	text-decoration: none;
+	display: block;
+}
+.topbar li a:hover{
+	color: red;
+	position: relative;
+	top: 1PX;
+	left: 1PX;
+}
+/*font圖與字的margin*/
+.topbar a:before{
+	margin-right: 2PX;
+}
+.top{
+	height: 65px;
+}
+.top .jq-logo{
+	display: block;
+	text-decoration: none;
+	background-image: url(../images/hexlogo_03.png);
+	background-repeat: no-repeat;
+	width: 170px;
+	height: 36px;
+	margin: 15PX 0 0 10PX;
+	text-indent: 101%;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+/*menu選單*/
+.menu{
+	position: relative;
+	bottom: 49PX;
+	z-index: 20;
+}
+.menu ol{
+	float: right;
+}
+.menu ol li{
+	float: left;
+	width: 90px;
+	margin-left: 30PX;
+	overflow: hidden;
+
+
+}
+.menu ol li a{
+	display: block;
+	line-height: 58PX;
+	text-decoration: none;
+	text-align: center;
+	font-weight: bolder;
+	color: #00cc99;
+}
+/*menu下方塊，純css做法，可和jq第15段點擊事件做交換*/
+.menu ol li:hover > ol{
+	display: block;
+}
+/*menu下方塊*/
+.box{
+	width: 90px;
+	height: 5px;
+	background-color: #00cc99;
+	position: relative;
+	bottom: 5Px;
+}
+/*menu下方塊移動(overflow)*/
+.menu ol li:hover .box{
+	bottom: -60PX;
+	display: block;
+	transition: all 0.4S;
+}
+.drop:hover{
+	position: relative;
+	top: 1PX;
+	right: 	1Px;
+}
+
+
+.addcolor{
+	color: red;
+}
+/*第二層menu*/
+.dropdown a:hover,.wordb.addcolor,.wordm.addcolor,.words.addcolor{
+	position: relative;
+	top: 1PX;
+	right: 	1Px;
+	color: #e54d23;
+	font-size: 17PX;
+}
+.menu ol li ol{
+	display: none;
+}
+.dropdown a{
+	background-color: rgba(0,0,0,0.7);
+}
+/*nivoslider*/
+.theme-default{
+	position: absolute;
+	bottom: 0PX;
+	width: 799px;
+}
+#slider{
+	border-radius: 20px 20PX 20PX 20PX;
+}
+/*第二大div區塊(content)*/
+.content{
+	width: 800px;
+	height: 100%;
+	margin: 0 auto;
+}
+.content ol{
+	float: right;
+}
+.teach{
+	float: left;
+	margin: 30PX 30PX 0 0;
+	border: 1PX solid silver;
+	border-top: none;
+	border-radius: 5Px;
+	box-shadow: 0px 4px 10px silver;
+	width: 223px;
+	height: 360px;
+}
+
+/*清除float*/
+.clearfix{
+	clear: both;
+}
+/*圖片*/
+
+.html5epic{
+	position: relative;
+	left: 50Px;
+}
+.RWDpic{
+	position: relative;
+	top: 15Px;
+}
+.jQuerypic{
+	position: relative;
+	left: 50PX;
+}
+/*圖片文字*/
+.html5box{
+	position: relative;
+	top: 20PX;
+	line-height: 20PX;
+}
+.RWDbox{
+	position: relative;
+	top: 77Px;
+}
+.jQuerybox{
+	position: relative;
+	top: 40PX;
+}
+.content h1{
+	text-align: center;
+	font-weight: bolder;
+	
+}
+.content p{
+	margin: 10PX;
+	text-indent: 20PX;
+	letter-spacing: 2PX;
+}
+.RWDbox span{
+	letter-spacing: 12PX;
+}
+/*jQuery圖片中的ol*/
+.jQueryol{
+	position: relative;
+	right: 40Px;
+	line-height: 25PX;
+}
+/*選字大中小*/
+.wordcoise ol{
+	position: relative;
+	right: 50PX;
+	top: 40Px;
+}
+.wordcoise ol li{
+	float: left;
+	margin: 40Px 10PX 0 0;
+	width: 20px;
+	height: 20px;
+}
+.wordcoise ol li a{
+	display: block;
+	background-color: black;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+}
+.wordcoise ol li a:hover{
+	color: red;
+	position: relative;
+	top: 1Px;
+	right: 1Px;
+}
+
+/*table表格*/
+.tablebox{
+	margin-top: 60PX;
+	margin-bottom: 50PX;
+}
+.tablebox h2{
+	margin-bottom: 20PX;
+	text-align: center;
+	font-weight: bolder;
+	font-size: 20PX;
+	letter-spacing: 2PX;
+}
+table{
+	margin: 0 auto;
+}
+th{
+	background-color: rgba(0,0,0,0.1);
+	padding: 5PX 30PX 5PX 30PX;
+	text-align: left;
+	font-weight: bolder;
+	letter-spacing: 2PX;
+}
+td{
+	padding: 5PX 35PX 5PX 35PX;
+	font-size: 14PX;
+	letter-spacing: 2PX;
+}
+tr{
+	border: 1PX solid black;
+	border-right: none;
+	border-left: none;
+}
+/*表尾*/
+.footer{
+	width: 800px;
+	margin: 0 auto;
+	overflow: hidden;	
+}
+.footer-box{
+	margin-top: -150PX;
+	width: 50px;	
+	height: 50px;	
+	font-size: 50Px;
+	position: relative;
+	left: 740PX;
+	z-index: 999;
+}
+.person:hover{
+	position: relative;
+	top: 1Px;
+	right: 1Px;
+}
+.footertable{
+	height: 400px;
+	background: linear-gradient(#00cc99,black);
+	
+}
+.boxx{
+	width: 200px;
+	height: 200px;
+	background-color: white;
+	position: relative;
+	top: 400PX;
+	left: 700PX;
+	transform: rotate(45deg);
+	
+}
+.footer:hover .boxx{
+	position: relative;
+	top: 850PX;
+	left: 850PX;
+	transition: all 1S;
+
+}
+.footertable h3{
+	text-align: center;
+	font-size: 20Px;
+	font-weight: bolder;
+	color: white;
+	padding-top: 30PX;
+	line-height: 30PX;
+	letter-spacing: 3PX;
+}
+textarea{
+	width: 400px;
+	height: 250px;
+	margin-top: 20PX;
+	margin-left: 20PX;
+	border-radius: 5PX;
+}
+.footer-cover{
+	height: 400px;
+	background-color: rgba(0,0,0,0.8);
+	transform: translateX(-800PX);
+	transition: all 1S;
+	position: relative;
+	bottom: 400PX;
+	color: white;
+}
+.cover{
+	transform: translateX(0PX);
+}
+/*form表格*/
+.footertable ol{
+	position: relative;
+	left: 450PX;
+	bottom: 250PX;
+}
+.footertable ol li{
+	margin-top: 10PX;
+	color: white;
+}
+.footertable ol li input{
+	margin-top: 4PX;
+	width: 300px;
+	height: 30px;
+	border-radius: 5PX;
+}
+#sent{
+	position: relative;
+	bottom: 240PX;
+	left: 695Px;
+	border-radius: 5PX;
+}
+h5{
+	text-align: center;
+	font-size: 25PX;
+	font-weight: bolder;
+	padding-top: 10PX;
+}
+.footer-cover form{
+	padding: 20PX 0 0 80PX;
+}
+.month{
+	position: relative;
+	left: 83Px;
+	bottom: 80PX;
+}
+.footer-cover-sent{
+	position: relative;
+	left: 200PX;
+	bottom: 100Px;
+}
+.footlogo{
+	position: relative;
+	bottom: 380Px;
+	left: 20PX;
+}
+/*form表格*/
+.arrow{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	font-size: 70PX;
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
